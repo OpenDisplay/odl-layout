@@ -16,8 +16,3 @@ repos:
         language: system
         entry: uv run mypy src/
         pass_filenames: false
-      - id: pylint
-        name: pylint
-        language: system
-        entry: uv run pylint src/
-        pass_filenames: false

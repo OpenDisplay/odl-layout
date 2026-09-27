@@ -13,7 +13,7 @@ authors = [
     {name = "g4bri3lDev", email = "admin@g4bri3l.de"}
 ]
 
-keywords = []  # TODO: Add relevant keywords
+keywords = ["e-paper", "eink", "layout", "odl", "opendisplay", "open-display-language"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -23,19 +23,20 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
-# TODO: Add your runtime dependencies here
-dependencies = []
+dependencies = [
+    "odl-renderer>=0.6.0",
+]
 
 [project.optional-dependencies]
 test = [
     "pytest>=9.0.2",
     "pytest-cov>=7.0.0",
-    # Uncomment if using async: "pytest-asyncio>=1.3.0",
+    "pytest-asyncio>=1.3.0",
+    "hypothesis>=6.151.12",
 ]
 dev = [
     "mypy>=1.19.1",
     "prek>=0.3.4",
-    "pylint>=4.0.5",
     "ruff>=0.14.10",
 ]
 
@@ -60,6 +61,15 @@ strict = true
 warn_return_any = true
 warn_unused_configs = true
 
+[[tool.mypy.overrides]]
+# Neither package ships a py.typed marker
+module = ["odl_renderer", "odl_renderer.*", "qrcode"]
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-# Uncomment if using async tests: asyncio_mode = "auto"
+asyncio_mode = "auto"
+
+[tool.uv.sources]
+# Local development against a sibling odl-renderer checkout (measure_text is unreleased)
+odl-renderer = { path = "../odl-renderer", editable = true }
