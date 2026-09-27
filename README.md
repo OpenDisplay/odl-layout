@@ -159,5 +159,3 @@ uv sync --all-extras
 uv run pytest
 uv run prek run --all-files   # ruff, ruff-format, mypy
 ```
-
-Until odl-renderer 0.5.13 is released, `odl-renderer` resolves to its `feat/measure-text` branch (see `[tool.uv.sources]`).

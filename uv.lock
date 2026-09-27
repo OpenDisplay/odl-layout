@@ -1083,7 +1083,7 @@ test = [
 requires-dist = [
     { name = "hypothesis", marker = "extra == 'test'", specifier = ">=6.151.12" },
     { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.19.1" },
-    { name = "odl-renderer", git = "https://github.com/OpenDisplay/odl-renderer?branch=feat%2Fmeasure-text" },
+    { name = "odl-renderer", specifier = ">=0.5.13" },
     { name = "prek", marker = "extra == 'dev'", specifier = ">=0.3.4" },
     { name = "pytest", marker = "extra == 'test'", specifier = ">=9.0.2" },
     { name = "pytest-asyncio", marker = "extra == 'test'", specifier = ">=1.3.0" },
@@ -1094,13 +1094,17 @@ provides-extras = ["test", "dev"]
 
 [[package]]
 name = "odl-renderer"
-version = "0.5.12"
-source = { git = "https://github.com/OpenDisplay/odl-renderer?branch=feat%2Fmeasure-text#e8f12cd611207c0341290dfb130dd70a8732221a" }
+version = "0.5.13"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
     { name = "pillow" },
     { name = "qrcode", extra = ["pil"] },
     { name = "resize-image" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/35/43/6fd4a0a01c3b7a4e06214fdcfc1be876f226fb359a3375c2b8e7aa123a96/odl_renderer-0.5.13.tar.gz", hash = "sha256:1e7555f32ae851c937d16a4a453aa7f64245cfa1831876bb0befb7846f270f04", size = 1121046, upload-time = "2026-09-27T12:25:04.651Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/66/bd/21ffe3cc08671a8a9e7354bb1e6773b89ce257418d177f3fc7f39cf0360e/odl_renderer-0.5.13-py3-none-any.whl", hash = "sha256:73f1b1072178b7fef902d38d3137b29d5edd469b730e0c15a561e9c9c7e75d9f", size = 874248, upload-time = "2026-09-27T12:25:03.07Z" },
 ]
 
 [[package]]
