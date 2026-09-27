@@ -1,0 +1,103 @@
+# One payload, rendered unchanged at every size in README.md.
+- type: column
+  children:
+    - type: row
+      h: auto
+      padding: [sm, md]
+      background: black
+      children:
+        - type: text
+          value: Home
+          size: lg
+          color: white
+          grow: 1
+        - type: text
+          value: Sat 27 Sep · 14:05
+          size: sm
+          color: white
+
+    - type: column
+      grow: 1
+      padding: md
+      gap: md
+      children:
+        - type: row
+          gap: md
+          children:
+            - type: icon
+              value: weather-partly-rainy
+              size: xxl
+            - type: column
+              grow: 1
+              children:
+                - type: text
+                  value: 21.5°
+                  size: xxl
+                - type: text
+                  value: Light rain from 16:00
+                  size: sm
+
+        - type: grid
+          cols: 3
+          gap: sm
+          children:
+            - type: column
+              padding: sm
+              border: black
+              radius: sm
+              children:
+                - type: text
+                  value: Humidity
+                  size: xs
+                - type: text
+                  value: 64%
+                  size: lg
+            - type: column
+              padding: sm
+              border: black
+              radius: sm
+              children:
+                - type: text
+                  value: Wind
+                  size: xs
+                - type: text
+                  value: 12 km/h
+                  size: lg
+            - type: column
+              padding: sm
+              border: black
+              radius: sm
+              children:
+                - type: text
+                  value: Battery
+                  size: xs
+                - type: progress_bar
+                  progress: 72
+                  h: md
+                  fill: red
+
+        - type: text
+          value: Today
+          size: md
+          color: red
+
+        - type: list
+          grow: 1
+          max_cols: 3
+          gap: xs
+          overflow_counter: true
+          items:
+            - {type: text, value: "09:00  Standup", size: sm}
+            - {type: text, value: "10:30  Dentist", size: sm}
+            - {type: text, value: "12:00  Lunch with Sam", size: sm}
+            - {type: text, value: "13:00  Review PR #38", size: sm}
+            - {type: text, value: "14:30  Groceries", size: sm}
+            - {type: text, value: "15:00  Call plumber", size: sm}
+            - {type: text, value: "16:00  Pick up parcel", size: sm}
+            - {type: text, value: "17:30  Gym", size: sm}
+            - {type: text, value: "18:00  Water plants", size: sm}
+            - {type: text, value: "19:00  Dinner", size: sm}
+            - {type: text, value: "20:00  Book club", size: sm}
+            - {type: text, value: "21:00  Take out bins", size: sm}
+            - {type: text, value: "21:30  Charge e-bike", size: sm}
+            - {type: text, value: "22:00  Backup NAS", size: sm}
