@@ -160,4 +160,4 @@ uv run pytest
 uv run prek run --all-files   # ruff, ruff-format, mypy
 ```
 
-During development, `odl-renderer` resolves to the sibling checkout `../odl-renderer` (see `[tool.uv.sources]`).
+Until odl-renderer 0.5.13 is released, `odl-renderer` resolves to its `feat/measure-text` branch (see `[tool.uv.sources]`).

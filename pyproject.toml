@@ -71,5 +71,5 @@ testpaths = ["tests"]
 asyncio_mode = "auto"
 
 [tool.uv.sources]
-# Local development against a sibling odl-renderer checkout (measure_text is unreleased)
-odl-renderer = { path = "../odl-renderer", editable = true }
+# measure_text is unreleased (OpenDisplay/odl-renderer#38). Remove this once odl-renderer 0.5.13 is on PyPI.
+odl-renderer = { git = "https://github.com/OpenDisplay/odl-renderer", branch = "feat/measure-text" }

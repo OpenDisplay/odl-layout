@@ -1083,7 +1083,7 @@ test = [
 requires-dist = [
     { name = "hypothesis", marker = "extra == 'test'", specifier = ">=6.151.12" },
     { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.19.1" },
-    { name = "odl-renderer", editable = "../odl-renderer" },
+    { name = "odl-renderer", git = "https://github.com/OpenDisplay/odl-renderer?branch=feat%2Fmeasure-text" },
     { name = "prek", marker = "extra == 'dev'", specifier = ">=0.3.4" },
     { name = "pytest", marker = "extra == 'test'", specifier = ">=9.0.2" },
     { name = "pytest-asyncio", marker = "extra == 'test'", specifier = ">=1.3.0" },
@@ -1095,43 +1095,12 @@ provides-extras = ["test", "dev"]
 [[package]]
 name = "odl-renderer"
 version = "0.5.12"
-source = { editable = "../odl-renderer" }
+source = { git = "https://github.com/OpenDisplay/odl-renderer?branch=feat%2Fmeasure-text#e8f12cd611207c0341290dfb130dd70a8732221a" }
 dependencies = [
     { name = "aiohttp" },
     { name = "pillow" },
     { name = "qrcode", extra = ["pil"] },
     { name = "resize-image" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "aiohttp", specifier = ">=3.13.4" },
-    { name = "hypothesis", marker = "extra == 'property'", specifier = ">=6.151.12" },
-    { name = "imagehash", marker = "extra == 'visual'", specifier = ">=4.3.2" },
-    { name = "pillow", specifier = ">=12.0.0" },
-    { name = "qrcode", extras = ["pil"], specifier = ">=7.4.2" },
-    { name = "resize-image", specifier = ">=0.4.0" },
-    { name = "syrupy", marker = "extra == 'visual'", specifier = ">=5.1.0" },
-]
-provides-extras = ["visual", "property"]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "mypy", specifier = ">=1.20.0" },
-    { name = "prek", specifier = ">=0.3.4" },
-    { name = "pytest", specifier = ">=9.0.3" },
-    { name = "pytest-asyncio", specifier = ">=1.3.0" },
-    { name = "pytest-cov", specifier = ">=7.1.0" },
-    { name = "pytest-xdist", specifier = ">=3.8.0" },
-    { name = "ruff", specifier = ">=0.15.10" },
-    { name = "time-machine", specifier = ">=2.9.0" },
-]
-test = [
-    { name = "pytest", specifier = ">=9.0.3" },
-    { name = "pytest-asyncio", specifier = ">=1.3.0" },
-    { name = "pytest-cov", specifier = ">=7.1.0" },
-    { name = "pytest-xdist", specifier = ">=3.8.0" },
-    { name = "time-machine", specifier = ">=2.9.0" },
 ]
 
 [[package]]
