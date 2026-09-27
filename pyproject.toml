@@ -24,7 +24,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "odl-renderer>=0.6.0",
+    "odl-renderer>=0.5.13",
 ]
 
 [project.optional-dependencies]
