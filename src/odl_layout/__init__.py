@@ -11,7 +11,7 @@ from .engine import CONTAINERS, Engine
 from .errors import LayoutError
 from .units import Scale
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = ["CONTAINERS", "LayoutError", "Scale", "layout"]
 
